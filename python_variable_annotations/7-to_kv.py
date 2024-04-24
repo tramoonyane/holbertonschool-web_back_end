@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+""" String and int/float to tuple """
 from typing import Union, Tuple
 
 
