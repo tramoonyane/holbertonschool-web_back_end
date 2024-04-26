@@ -7,7 +7,7 @@ that yields random numbers between 0 and 10.
 
 from asyncio import sleep
 from random import random
-from typing import AsyncGenerator
+from typing import AsyncGenerator, AsyncGenerator
 
 
 async def async_generator() -> AsyncGenerator[float, None, None]:
