@@ -4,7 +4,7 @@ that takes no arguments."""
 
 import asyncio
 import random
-from typing import List, Generator
+from typing import AsyncGenerator
 
 
 async def async_generator() -> AsyncGenerator[float, None, None]:
