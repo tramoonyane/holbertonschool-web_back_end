@@ -1,2 +1,15 @@
+// Script to list all databases in MongoDB
+
+// Connect to MongoDB server
+conn = new Mongo();
+
+// Access admin database
+db = conn.getDB("admin");
+
 // List all databases
-show dbs;
+databases = db.adminCommand({ listDatabases: 1 });
+
+// Print the name and size of each database
+databases.databases.forEach(function(database) {
+    print(database.name + "\t" + (database.sizeOnDisk / (1024 * 1024)).toFixed(3) + "GB");
+});
